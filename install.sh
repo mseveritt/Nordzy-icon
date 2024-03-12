@@ -15,7 +15,7 @@ SRC_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 THEME_NAME=Nordzy
 COLOR_VARIANTS=('' '-dark')
-THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-turquoise' '-cyan')
+THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-turquoise' '-cyan' '-ms')
 hex_white='#d8dee9'
 hex_dark='#2e3440'
 update_cache='TRUE'
@@ -47,7 +47,7 @@ OPTIONS:
   -g                      Update gtk icon cache
   -n, --name NAME         Specify theme name (Default: $THEME_NAME)
   -p, --panel             Make panel's color opposite to the color variant of the theme (Default: same as color variant)
-  -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|turquoise|cyan|all] (Default: blue)
+  -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|turquoise|cyan|ms|all] (Default: blue)
   --total                 Install all theme, color and panel variants
   -h, --help              Show help
 EOF
@@ -270,6 +270,10 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           cyan)
             themes+=("${THEME_VARIANTS[8]}")
+            shift
+            ;;
+          ms)
+            themes+=("${THEME_VARIANTS[9]}")
             shift
             ;;
           all)
