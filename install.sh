@@ -15,7 +15,7 @@ SRC_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 THEME_NAME=Nordzy
 COLOR_VARIANTS=('' '-dark')
-THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-turquoise' '-cyan' '-ms')
+THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-turquoise' '-cyan' '-grey' '-sur')
 hex_white='#d8dee9'
 hex_dark='#2e3440'
 update_cache='TRUE'
@@ -272,10 +272,14 @@ while [[ "$#" -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[8]}")
             shift
             ;;
-          ms)
+          grey)
             themes+=("${THEME_VARIANTS[9]}")
             shift
             ;;
+          sur)
+            themes+=("${THEME_VARIANTS[10]}")
+            shift
+            ;;            
           all)
             themes+=("${THEME_VARIANTS[@]}")
             shift
