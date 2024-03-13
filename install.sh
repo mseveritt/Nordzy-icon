@@ -97,6 +97,9 @@ theme_color() {
   if [[ ${1} != '' ]]; then
     cp -r ${SRC_DIR}/colors/color${1}/*.svg                                          ${THEME_DIR}/places/scalable
   fi
+  if [[ ${1} == '-grey' ]] || [[ ${1} == '-sur' ]]; then
+    cp ${SRC_DIR}/colors/file-manager/file-manager${1}.svg ${THEME_DIR}/apps/scalable/file-manager.svg
+  fi
 }
 
 install() {
